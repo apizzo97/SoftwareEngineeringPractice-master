@@ -34,7 +34,9 @@ public class BankAccount {
 
     }
 
-
+    /**
+     * The if statement is checking if the @ symbol is present within the string
+     */
     public static boolean isEmailValid(String email){
         if (email.indexOf('@') == -1){
             return false;
