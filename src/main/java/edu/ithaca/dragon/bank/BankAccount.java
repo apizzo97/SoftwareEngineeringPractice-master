@@ -38,11 +38,27 @@ public class BankAccount {
      * The if statement is checking if the @ symbol is present within the string
      */
     public static boolean isEmailValid(String email){
-        if (email.indexOf('@') == -1){
+        if ((email.indexOf('@') == -1 || (email.indexOf('@') == 0) || (email.indexOf('.') == -1))) {
+            return false;
+        }
+        else if ((email.indexOf('@') == email.length() - 1) || (email.indexOf('@') == email.length() - 2) || email.indexOf('@') == email.length() - 3) {
+            return false;
+        }
+        else if ((email.indexOf('.') == 0) || (email.indexOf('.') == email.length() - 1) || (email.indexOf('.') == email.length() - 2)) {
+            return false;
+        }
+        else if ((email.indexOf('@')) + 1 == (email.indexOf('.'))) {
             return false;
         }
         else {
-            return true;
+            String emailSub = email.substring(email.indexOf('@') + 1, email.length() - 1);
+            if ((emailSub.indexOf('@') == -1)) {
+                return true;
+            }
+            else {
+                return false;
+        }
+
         }
     }
 }
