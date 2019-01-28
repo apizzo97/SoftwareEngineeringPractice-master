@@ -27,7 +27,9 @@ public class BankAccount {
     }
 
     /**
-     * @post reduces the balance by amount if amount is non-negative and smaller than balance
+     * Check to ensure that the amount is not negative
+     * Confirm that the amount being withdrawn is less then the current balance
+     * Subtract the amount from the current balance
      */
     public void withdraw (double amount)  {
         balance -= amount;
@@ -35,7 +37,11 @@ public class BankAccount {
     }
 
     /**
-     * The if statement is checking if the @ symbol is present within the string
+     * The function checks the email address to ensure that both an @ and . are present.
+     * Checks to make sure that both the @ and . are not the first or last chars in the string
+     * Checks that both the @ and . are not directly next to each other
+     * Ensures that the @ and . are not in the last 3 chars of the string
+     * Checks to make sure multiple @ symbols are not entered
      */
     public static boolean isEmailValid(String email){
         if ((email.indexOf('@') == -1 || (email.indexOf('@') == 0) || (email.indexOf('.') == -1))) {
