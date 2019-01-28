@@ -32,7 +32,15 @@ public class BankAccount {
      * Subtract the amount from the current balance
      */
     public void withdraw (double amount)  {
-        balance -= amount;
+        if (amount < 0) {
+        }
+
+        else if (amount > balance) {
+        }
+
+        else {
+            balance = balance - amount;
+        }
 
     }
 
