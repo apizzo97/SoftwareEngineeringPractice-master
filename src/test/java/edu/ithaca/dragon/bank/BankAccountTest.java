@@ -49,4 +49,15 @@ class  BankAccountTest {
         assertThrows(IllegalArgumentException.class, ()-> new BankAccount("", 100));
     }
 
+    @Test
+    void isAmountValidTest() {
+        BankAccount bankAccount = new BankAccount("a@b.com", 200);
+
+        assertFalse(bankAccount.isAmountValid(-100));
+        assertFalse(bankAccount.isAmountValid(100.234));
+        assertTrue(bankAccount.isAmountValid(300.26));
+        assertTrue(bankAccount.isAmountValid(300));
+
+    }
+
 }

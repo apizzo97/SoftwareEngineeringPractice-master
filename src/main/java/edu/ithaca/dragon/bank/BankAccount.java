@@ -75,4 +75,12 @@ public class BankAccount {
 
         }
     }
+
+    /**
+     * Takes a double and returns true if the double is positive and has only two decimal places
+     * Returns false otherwise
+     */
+    public boolean isAmountValid(double amount) {
+        return false;
+    }
 }
