@@ -81,6 +81,19 @@ public class BankAccount {
      * Returns false otherwise
      */
     public boolean isAmountValid(double amount) {
-        return false;
+        if (amount < 0.00) {
+            return false;
+        }
+
+        String convertedAmount = Double.toString(amount);
+        if ((convertedAmount.indexOf('.')) == convertedAmount.length() - 2) {
+            return true;
+        }
+        else if ((convertedAmount.indexOf('.')) == convertedAmount.length() - 3) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }

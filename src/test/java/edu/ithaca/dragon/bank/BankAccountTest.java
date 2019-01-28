@@ -57,6 +57,7 @@ class  BankAccountTest {
         assertFalse(bankAccount.isAmountValid(100.234));
         assertTrue(bankAccount.isAmountValid(300.26));
         assertTrue(bankAccount.isAmountValid(300));
+        assertTrue(bankAccount.isAmountValid(300.3));
 
     }
 
